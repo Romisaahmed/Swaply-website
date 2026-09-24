@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-light);
+}
+
+.login-box {
+    width: 350px;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin: 100px auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px var(--icon-purple);
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.login-box > p {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-muted);
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 11px;
+    margin: 25px 0;
+     background-color: var(--button-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--button-primary-hover);
+    cursor: pointer;
+}
+
+.signup-text {
+    margin-top: 20px;
+    color: var(--text-dark) !important;
+    display: inline;
+    margin-top: 10px;
+}
+
+a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.name-row {
+    display: flex;
+    gap: 15px;
+}
+

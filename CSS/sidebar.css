@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    padding: 20px;
+    direction: ltr;
+}
+
+.right-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-left: auto;
+}
+
+.side-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--text-dark);
+}
+
+.title-with-icon i {
+    color: var(--icon-purple);
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+.card-title-text {
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--text-dark);
+}
+
+.card-desc {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.primary-btn,
+.secondary-btn {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+.primary-btn {
+    background: var(--primary-dark);
+    color: var(--white);
+    border: none;
+}
+
+.primary-btn:hover {
+    background: var(--button-primary-hover);
+}
+
+.secondary-btn {
+    background: var(--white);
+    color: var(--text-muted);
+    border: 1px solid var(--border-primary);
+}
+
+.secondary-btn:hover {
+    background: var(--border-light);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--text-primary);
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    top: 3px;
+    background-color: var(--white);
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-dark);
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.days-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.day-badge {
+    flex: 1;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 10.5px;
+    font-weight: 500;
+    background:var(--white);
+    border: 1px solid var(--border-primary);
+    border-radius: 6px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.day-badge.active {
+    background: var(--primary-dark) ;
+    color: var(--white);
+    border-color: var(--primary-dark);
+}
+
+.format-title {
+    margin-top: 4px;
+}
+
+.format-options {
+    display: flex;
+    gap: 6px;
+}
+
+.format-option {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px 4px;
+    font-size: 10.5px;
+    font-weight: 500;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    color: var(--text-muted);
+    background: var(--white);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.format-option.active {
+    border-color: var(--button-secondary-border);
+    color: var(--white);
+    background: var(--primary-dark);
+}
+
+.format-option .check-icon {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    font-size: 12px;
+    color: var(--primary-dark);
+    background: var(--white);
+    border-radius: 50%;
+}
+
+.percentage {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--primary-dark);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border-light);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    width: 85%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--button-primary), var( --accent-purple));
+    border-radius: 3px;
+}
+
+.completion-tip {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
